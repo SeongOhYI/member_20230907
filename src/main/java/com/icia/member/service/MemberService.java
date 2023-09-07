@@ -37,4 +37,20 @@ public class MemberService {
     public List<MemberDTO> findAll() {
         return memberRepository.findAll();
     }
+
+    public MemberDTO findById(Long id) {
+        return memberRepository.findById(id);
+    }
+
+    public void delete(Long id) {
+        memberRepository.delete(id);
+    }
+
+    public MemberDTO findByMemberEmail(String memberEmail) {
+        return memberRepository.findByMemberEmail(memberEmail);
+    }
+
+    public void update(MemberDTO memberDTO) {
+        memberRepository.update(memberDTO);
+    }
 }

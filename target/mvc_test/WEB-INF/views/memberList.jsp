@@ -35,10 +35,11 @@
           <td>${member.memberBirth}</td>
           <td>${member.memberMobile}</td>
           <td>
-            <button class="btn btn-info" onclick="detail_fn()">조회</button>
+            <button class="btn btn-info" onclick="detail_fn('${member.id}')">조회</button>
+            <a href="/member?id=${member.id}">조회</a>
           </td>
           <td>
-            <button class="btn btn-danger" onclick="delete_fn()">삭제</button>
+            <button class="btn btn-danger" onclick="delete_fn('${member.id}')">삭제</button>
           </td>
         </tr>
       </c:forEach>
@@ -48,4 +49,13 @@
 
 <%@include file="component/footer.jsp" %>
 </body>
+<script>
+  const detail_fn = (id) => {
+    location.href = "/member?id=" + id;
+  }
+
+  const delete_fn = (id) => {
+    location.href = "/delete?id=" + id;
+  }
+</script>
 </html>

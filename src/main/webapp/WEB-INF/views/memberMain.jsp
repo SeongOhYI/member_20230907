@@ -28,4 +28,9 @@ model에 담은 이메일: ${email} <br>
 <%@include file="component/footer.jsp"%>
 
 </body>
+<script>
+    const update_fn = () => {
+        location.href = "/update";
+    }
+</script>
 </html>
